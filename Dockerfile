@@ -31,7 +31,9 @@ RUN apk update \
 # Install "bcmath" for RabbitMQ
     && docker-php-ext-install bcmath \
 # Install composer
-    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
+# Install Git
+    && apk add --no-cache bash git openssh
 
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
