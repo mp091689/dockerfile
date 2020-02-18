@@ -1,4 +1,4 @@
-FROM php:7.3-fpm-alpine
+FROM php:7.4-fpm-alpine
 
 MAINTAINER Mykyta Popov <mp091689@gmail.com>
 
