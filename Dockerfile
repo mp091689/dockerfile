@@ -26,7 +26,6 @@ RUN apk update \
     && docker-php-ext-install pgsql \
 # Install libzip
     && apk add --no-cache zip libzip-dev \
-    && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install zip \
 # Install "bcmath" for RabbitMQ
     && docker-php-ext-install bcmath \
