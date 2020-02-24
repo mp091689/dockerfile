@@ -29,6 +29,8 @@ RUN apk update \
     && docker-php-ext-install zip \
 # Install "bcmath" for RabbitMQ
     && docker-php-ext-install bcmath \
+# Install socket for RabbitMQ
+    && docker-php-ext-install sockets \
 # Install composer
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
 # Install Git
